@@ -12,7 +12,6 @@ def inicio(request):
                 "titulo": titulo,
                 "el_form":form,
             }
-
     if form.is_valid():
         instance = form.save(commit=False)
         nombre = form.cleaned_data.get("nombre")
@@ -20,17 +19,15 @@ def inicio(request):
         if not instance.nombre:
             instance.nombre="Persona"
         instance.save()
-
         context = {
             "titulo": "Gracias %s !" %(nombre)
         }
-
         if not nombre:
             context = {
                 "titulo": "Gracias %s !" %(email)
             }
-        print instance
-        print instance.timestramp
+        #print instance
+        #print instance.timestramp
 
         #form_data = form.cleaned_data
         #abc = form_data.get("email")
