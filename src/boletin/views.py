@@ -26,8 +26,8 @@ def inicio(request):
             context = {
                 "titulo": "Gracias %s !" %(email)
             }
-        #print instance
-        #print instance.timestramp
+        print instance
+        print instance.timestramp
 
         #form_data = form.cleaned_data
         #abc = form_data.get("email")
