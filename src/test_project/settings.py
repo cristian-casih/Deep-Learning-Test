@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-EMAIL_HOST = 'stmp.gmail.com'
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'cristiancasih1@gmail.com'
 EMAIL_HOST_PASSWORD ='sqlserver#include12'
 EMAIL_PORT = 587
