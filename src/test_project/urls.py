@@ -17,13 +17,14 @@ from django.conf import settings
 from django.conf.urls import url
 from django.conf.urls.static import static
 from django.contrib import admin
-
+from .views import about
 from boletin import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^contact/', views.contact, name='contact'),
-    url(r'^$', views.inicio, name='inicio')
+    url(r'^contact/$', views.contact, name='contact'),
+    url(r'^$', views.inicio, name='inicio'),
+    url(r'^about/$', about, name='about'),
 ]
 if settings.DEBUG:
     urlpatterns +=static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
