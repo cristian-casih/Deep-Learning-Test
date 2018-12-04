@@ -1,20 +1,4 @@
 {% extends "base.html" %}
-<<<<<<< HEAD
-
-{% block head_titlr %}Bienvenidos| {% endblock %}
-
-{% block jumbotron_content %}
-        <h1>INICIO CRIS!!!</h1>
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
-        <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
-
-{% endblock %}
-
-{{ titulo }} <br/>
-=======
 {% load crispy_forms_tags %}
 
 {% block head_title %}Bienvenidos | {% endblock %}
@@ -37,20 +21,10 @@
 {% endblock %}
 
 {{ titulo }}<br/>
->>>>>>> 4edb04c4d5458e2245efeabb843de1a5b4b688f2
 {{ request.user }}
 <hr/>
 <br/>
-{% block content %}
 
-
-<<<<<<< HEAD
-<form method="POST" action="">{% csrf_token %}
-{{ el_form.as_p }}
-<input type='submit' value='Registrame' />
-</form>
-{% endblock %}
-=======
 {% block content%}
 <div class="row">
   <div class="col-sm-3 col-xs-12 pull-right">
@@ -73,4 +47,3 @@
 </div>
 <hr/>
 {% endblock  %}
->>>>>>> 4edb04c4d5458e2245efeabb843de1a5b4b688f2
