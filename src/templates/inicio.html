@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+<<<<<<< HEAD
 
 {% block head_titlr %}Bienvenidos| {% endblock %}
 
@@ -13,14 +14,63 @@
 {% endblock %}
 
 {{ titulo }} <br/>
+=======
+{% load crispy_forms_tags %}
+
+{% block head_title %}Bienvenidos | {% endblock %}
+
+{% block jumbotron %}
+<div class="jumbotron">>
+<div class='row'>
+  <div class='col-sm-6'>
+      <!--<div class="jumbotron">-->
+        <h1>PROBAR DJANGO 1.10</h1>
+        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
+        <p>To see the difference between static and fixed top navbars, just scroll.</p>
+        <p>
+          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button"> UNIRTE &raquo;</a>
+        </p>
+</div>
+<div class='col-sm-6' style='background-color:black;height:300px;'></div>
+</div>
+</div>
+{% endblock %}
+
+{{ titulo }}<br/>
+>>>>>>> 4edb04c4d5458e2245efeabb843de1a5b4b688f2
 {{ request.user }}
 <hr/>
 <br/>
 {% block content %}
 
 
+<<<<<<< HEAD
 <form method="POST" action="">{% csrf_token %}
 {{ el_form.as_p }}
 <input type='submit' value='Registrame' />
 </form>
 {% endblock %}
+=======
+{% block content%}
+<div class="row">
+  <div class="col-sm-3 col-xs-12 pull-right">
+    <p class='lead text-aling-center'>{{ titulo }}</p>
+    <form method="POST" action="">{% csrf_token %}
+    {{ el_form|crispy }}
+    <input class="btn btn-primary" type="submit" value='Incribirse' />
+    </form>
+  </div>
+
+<div class='col-sm-3'>
+    <p class='lead text-align-center'>Creado con Django &amp; Bootstrap</p>
+</div>
+<div class='col-sm-3'>
+    <p class='lead text-align-center'>Con mucho amor </p>
+</div>
+<div class='col-sm-3'>
+    <p class='lead text-align-center'>Codigo abierto</p>
+</div>
+</div>
+<hr/>
+{% endblock  %}
+>>>>>>> 4edb04c4d5458e2245efeabb843de1a5b4b688f2

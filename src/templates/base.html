@@ -10,17 +10,28 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
+<<<<<<< HEAD
     <title>{% block head_titlr %}{% endblock %}Django Prueba</title>
 
 {% include "head_css.html" %}
 
+=======
+    <title>{% block head_title %}{% endblock %} DJANGO PRUEBA </title>
+
+
+{% include "head_css.html" %}
+>>>>>>> 4edb04c4d5458e2245efeabb843de1a5b4b688f2
   </head>
 
   <body>
 {% include "navbar.html" %}
 
 
+    <div class="container-fluid ">
+{% block jumbotron %}
+<!-- Main component for a primary marketing message or call to action -->
 
+<<<<<<< HEAD
     <div class="container">
 {% block jumbotron %}
 
@@ -39,3 +50,31 @@
 {% include "javascript.html" %}
   </body>
 </html>
+=======
+{% endblock %}
+
+
+{% block content %}
+{% endblock %}
+
+
+    </div>
+
+{% include "javascript.html" %}
+    </body>
+</html>
+
+
+    <!--&lt;!&ndash; Bootstrap core JavaScript-->
+    <!--================================================== &ndash;&gt;-->
+    <!--&lt;!&ndash; Placed at the end of the document so the pages load faster &ndash;&gt;-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+    <!--<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>-->
+    <!--<script src="{% static 'js/bootstrap.min.js' %}"></script>-->
+    <!--&lt;!&ndash; IE10 viewport hack for Surface/desktop Windows 8 bug &ndash;&gt;-->
+    <!--<script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>-->
+  <!--</body>-->
+<!--</html>-->
+
+ <!--<link href="{% static 'css/ie10-viewport-bug-workaround.css' %}" rel="stylesheet">-->
+>>>>>>> 4edb04c4d5458e2245efeabb843de1a5b4b688f2
