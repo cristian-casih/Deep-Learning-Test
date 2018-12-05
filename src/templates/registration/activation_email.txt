@@ -1,0 +1,13 @@
+{% load i18n %}
+
+{% trans "Activa tu cuenta en" %} {{ site.name }}:
+
+Hola,
+Haz click en el enlace para activar tu cuena.
+http://{{ site.domain }}{% url 'registration_activate' activation_key %}
+http://example.com/accounts/activate/a98bf28ab9417edb5f48591f7159024f87da721b
+
+
+{% blocktrans %}Enlace válido durante {{ expiration_days }} días.{% endblocktrans %}
+
+-Team Cris !
