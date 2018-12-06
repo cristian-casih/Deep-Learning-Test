@@ -2,8 +2,18 @@
 {% load crispy_forms_tags %}
 
 {% block head_title %}Bienvenidos | {% endblock %}
+<style>
+{% block style %}
+.jumbotron {
+    background-color: #15397d !important;
+    color: white !important;
+}
+{% endblock %}
+</style>
+
 
 {% block jumbotron %}
+<div class="container ">
 <div class="jumbotron">
 <div class='row'>
   <div class='col-sm-6'>
@@ -15,7 +25,8 @@
           <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button"> UNIRTE &raquo;</a>
         </p>
 </div>
-<div class='col-sm-6' style='background-color:black;height:300px;'></div>
+<div class='col-sm-6'><iframe width="560" height="315" src="https://www.youtube.com/embed/4N3dJ9P5Hso" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+</div>
 </div>
 </div>
 {% endblock %}
@@ -26,6 +37,7 @@
 <br/>
 
 {% block content%}
+
 <div class="row">
   <div class="col-sm-3 col-xs-12 pull-right">
     <p class='lead text-aling-center'>{{ titulo }}</p>

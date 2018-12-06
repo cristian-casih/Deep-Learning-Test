@@ -11,20 +11,26 @@
     <link rel="icon" href="../../favicon.ico">
 
     <title>{% block head_title %}{% endblock %} DJANGO PRUEBA </title>
-
+<style>
+{% block style %}
+.jumbotron {
+    background-color: #15397d !important;
+    color: white !important;
+}
+{% endblock %}
+</style>
 
 {% include "head_css.html" %}
   </head>
 
   <body>
 {% include "navbar.html" %}
-
-
-    <div class="container-fluid ">
 {% block jumbotron %}
-<!-- Main component for a primary marketing message or call to action -->
 
 {% endblock %}
+
+    <div class="container ">
+
 
 
 {% block content %}
