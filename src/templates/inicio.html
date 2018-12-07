@@ -16,8 +16,18 @@
 {% endblock %}
 </style>
 
-
 {% block jumbotron %}
+
+{% if request.user.is_staff %}
+<table class='table'>
+{% for intance in queryset %}
+<tr><td>{{ intance }}</td><td>{{ intance.nombre }}</td><td>{{ intance.timestamp }}</td></tr><br/>
+{% endfor %}
+</table>
+{% else %}
+
+
+
 <div class="container ">
 <div class="jumbotron">
 <div class='row'>
@@ -34,6 +44,7 @@
 </div>
 </div>
 </div>
+{% endif %}
 {% endblock %}
 
 {{ titulo }}<br/>
@@ -42,15 +53,20 @@
 <br/>
 
 {% block content%}
-
+{% if not request.user.is_staff %}
 <div class="row">
   <div class="col-sm-3 col-xs-12 pull-right">
-    <p class='lead text-aling-center'>{{ titulo }}</p>
+    {% if not user.is_authenticated%}
+    <p class='lead text-aling-center'>Suscribirte</p>
     <form method="POST" action="">{% csrf_token %}
     {{ el_form|crispy }}
-    <input class="btn btn-primary" type="submit" value='Incribirse' />
+    <input class="btn btn-primary" type="submit" value='Enviar' />
     </form>
+    {% else %}
+    <p class='lead text-align-center'>{{ titulo }}</br></br></br> <i class="far fa-hand-peace fa-5x" aria-hidden="true"></i></p>
+    {% endif %}
   </div>
+
 
 <div class='col-sm-3'>
     <p class='lead text-align-center'>Creado con Django &amp; Bootstrap</p><img src='{% static "img/roman.jpg"%}'/>
@@ -63,4 +79,5 @@
 </div>
 </div>
 <hr/>
+{% endif %}
 {% endblock  %}
