@@ -9,7 +9,9 @@ body {
 .navbar-default {
     background-color: #15397e !important;
     border-color: #6c88b1 !important;
+
 }
+
 .navbar-default .navbar-brand{
     color:#FFF !important;
 }
@@ -17,8 +19,12 @@ body {
     color: #6c88b1 !important;
 }
 .navbar-default .navbar-nav>li>a {
-    color: #FFF !important;
+    color: #35a3ab !important;
+    background-color: #15397e !important;
+
+
 }
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav>li>a:hover {
     color: #faffbd !important;
 }
+

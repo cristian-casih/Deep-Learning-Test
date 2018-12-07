@@ -1,13 +1,18 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
+{% load static %}
 
 {% block head_title %}Bienvenidos | {% endblock %}
-<style>
+<style xmlns="http://www.w3.org/1999/html">
 {% block style %}
 .jumbotron {
     background-color: #15397d !important;
     color: white !important;
 }
+.fa-5x{
+    font-size:6em !important;
+}
+
 {% endblock %}
 </style>
 
@@ -48,13 +53,13 @@
   </div>
 
 <div class='col-sm-3'>
-    <p class='lead text-align-center'>Creado con Django &amp; Bootstrap</p>
+    <p class='lead text-align-center'>Creado con Django &amp; Bootstrap</p><img src='{% static "img/roman.jpg"%}'/>
 </div>
 <div class='col-sm-3'>
-    <p class='lead text-align-center'>Con mucho amor </p>
+    <p class='lead text-align-center'>Con mucho amor</br></br><i class="far fa-futbol fa-spin fa-5x" style="color:blue"></i></p>
 </div>
-<div class='col-sm-3'>
-    <p class='lead text-align-center'>Codigo abierto</p>
+<div    class='col-sm-3'>
+    <p  class='lead text-align-center'>Codigo abierto</br></br><i class="fab fa-reacteurope fa-pulse fa-5x fa-fw"></i></p>
 </div>
 </div>
 <hr/>
